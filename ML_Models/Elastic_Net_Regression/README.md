@@ -12,35 +12,6 @@ It aims to improve model **generalization**, **reduce overfitting**, and **enhan
 
 The **objective function** for Elastic Net regression is:
 
-$$
-\text{Loss} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda_1 \sum_{j=1}^{p} |\beta_j| + \lambda_2 \sum_{j=1}^{p} \beta_j^2
-$$
-
-Where:
-
-* $y_i$: Actual target value
-* $\hat{y}_i$: Predicted target value
-* $\beta_j$: Coefficient of the j-th feature
-* $\lambda_1$: Regularization strength for L1 (Lasso)
-* $\lambda_2$: Regularization strength for L2 (Ridge)
-
-Alternatively, Elastic Net is often expressed using a **mixing parameter** $\alpha \in [0, 1]$:
-
-$$
-\text{Loss} = \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 + \lambda \left[ \alpha \sum_{j=1}^{p} |\beta_j| + (1 - \alpha) \sum_{j=1}^{p} \beta_j^2 \right]
-$$
-
-Where:
-
-* $\alpha = 1$: Pure Lasso
-* $\alpha = 0$: Pure Ridge
-* $0 < \alpha < 1$: Elastic Net
-* $\lambda$: Overall strength of regularization
-
-## 🔍 Mathematical Formulation
-
-The **objective function** for Elastic Net regression is:
-
 ```
 
 Loss = ∑(yᵢ - ŷᵢ)² + λ₁ ∑|βⱼ| + λ₂ ∑βⱼ²
