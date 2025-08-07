@@ -108,7 +108,7 @@ Elastic Net is widely used in domains where **both feature selection and general
 
 ---
 
-# 🔗 Elastic Net Regression - Applied on Algerian Forest Fire Dataset
+## 🔗 Elastic Net Regression - Applied on Algerian Forest Fire Dataset
 
 ### Overview
 
