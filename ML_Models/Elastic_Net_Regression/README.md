@@ -40,7 +40,7 @@ Where:
 - α = 0 → Pure Ridge  
 - 0 < α < 1 → Elastic Net  
 - λ: Overall strength of regularization  
-```
+
 
 **Intuition:**
 
