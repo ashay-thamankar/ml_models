@@ -37,6 +37,40 @@ Where:
 * $0 < \alpha < 1$: Elastic Net
 * $\lambda$: Overall strength of regularization
 
+## 🔍 Mathematical Formulation
+
+The **objective function** for Elastic Net regression is:
+
+```
+
+Loss = ∑(yᵢ - ŷᵢ)² + λ₁ ∑|βⱼ| + λ₂ ∑βⱼ²
+
+```
+
+Where:
+
+- yᵢ: Actual target value  
+- ŷᵢ: Predicted target value  
+- βⱼ: Coefficient of the j-th feature  
+- λ₁: Regularization strength for L1 (Lasso)  
+- λ₂: Regularization strength for L2 (Ridge)  
+
+Alternatively, Elastic Net is often expressed using a **mixing parameter** α ∈ [0, 1]:
+
+```
+
+Loss = ∑(yᵢ - ŷᵢ)² + λ \[ α ∑|βⱼ| + (1 - α) ∑βⱼ² ]
+
+```
+
+Where:
+
+- α = 1 → Pure Lasso  
+- α = 0 → Pure Ridge  
+- 0 < α < 1 → Elastic Net  
+- λ: Overall strength of regularization  
+```
+
 **Intuition:**
 
 * The **L1 term** encourages sparsity (feature selection)
