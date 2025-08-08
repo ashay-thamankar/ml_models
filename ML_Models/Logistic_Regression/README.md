@@ -66,4 +66,26 @@ The model parameters (weights) are learned using optimization techniques like Gr
 
 ---
 
-This guide gives a complete overview of Logistic Regression, highlighting how it operates mathematically, where it's effective, and the contexts in which it can be applied. 🔁📘💡
+### 📌 Example: Logistic Regression in Action ✨✨✨
+
+This example demonstrates how to use the `LogisticRegressionCustom` class on a synthetic dataset for binary classification:
+
+* A dataset is generated using `make_classification` with 10 features and two classes.
+* The data is split into training and testing sets.
+* The logistic regression model is trained and used to predict outcomes.
+* Model performance is evaluated using accuracy, classification report, and confusion matrix. ✅
+
+To enhance performance:
+
+* **GridSearchCV** and **RandomizedSearchCV** are used for hyperparameter tuning across solvers, penalties, regularization strengths, and class weights.
+* The best parameters are automatically selected for optimal results. 🧠⚙️
+
+Additional use cases covered:
+
+* Multiclass classification using one-vs-rest strategy.
+* Handling imbalanced datasets using weighted classes.
+* Evaluating models with **ROC curves** and **AUC scores** for better insight. 📈📊
+
+Check out the full notebook [here](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/Logistic_Regression/Logistic_Regression_Example.ipynb) for complete implementation and visualization. 🔍📒
+
+---
