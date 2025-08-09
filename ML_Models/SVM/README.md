@@ -88,7 +88,9 @@ Given training data $(x_i, y_i)$:
 Optimization:
 
 $$
+
 \min_{w,b,\xi_i,\xi_i^*} \quad \frac{1}{2} \lVert w \rVert^2 \;+\; C \sum_{i=1}^m \big( \xi_i + \xi_i^* \big)
+
 $$
 
 subject to:
