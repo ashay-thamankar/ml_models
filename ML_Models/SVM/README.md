@@ -168,3 +168,56 @@ Kernels allow SVM to work in **non-linear spaces** by mapping data into a higher
 * Pattern recognition
 
 ---
+
+
+# 🖥️ Support Vector Machines (SVM) Examples
+
+This directory contains three example notebooks demonstrating the use of Support Vector Machines for both classification and regression tasks, as well as kernel-based transformations.
+
+## 1️⃣ Support Vector Classifier (SVC) Example
+
+📄 [Notebook Link](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/SVM/Support_Vector_Classifier_Example.ipynb)
+
+This notebook demonstrates:
+
+* 🧪 Creating and splitting a synthetic dataset for binary classification.
+* ⚙️ Implementing SVM classification with different kernels:
+
+  * 📏 Linear
+  * 🌐 RBF (Radial Basis Function)
+  * 🔢 Polynomial
+  * ➖ Sigmoid
+* 📊 Comparing classification performance metrics (precision, recall, f1-score, confusion matrix).
+* 🔍 Performing hyperparameter tuning using `GridSearchCV` to improve model performance.
+
+## 2️⃣ Support Vector Regressor (SVR) Example
+
+📄 [Notebook Link](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/SVM/Support_Vector_Regressor_Example.ipynb)
+
+This notebook demonstrates:
+
+* 📊 Using the `tips` dataset for regression tasks.
+* 🛠️ Preprocessing categorical data using label encoding and one-hot encoding.
+* 📈 Implementing Support Vector Regression with default parameters.
+* 🧮 Evaluating model performance using R² score and Mean Absolute Error (MAE).
+* 🔍 Performing hyperparameter tuning using `GridSearchCV` to optimize SVR parameters.
+
+## 3️⃣ Support Vector Classifier with Kernel Features Example
+
+📄 [Notebook Link](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/SVM/Support_Vector_Classifier_Kernel_Example.ipynb)
+
+This notebook demonstrates:
+
+* 🎯 Creating two concentric circular datasets to illustrate non-linear separability.
+* 🧩 Engineering polynomial features manually (`X1²`, `X2²`, `X1*X2`) for kernel-based classification.
+* ⚙️ Applying SVC with different kernels (linear, polynomial, RBF, sigmoid).
+* ✅ Showing perfect classification accuracy after kernel transformation.
+
+## 📚 Key Learnings
+
+* 💪 SVM is a powerful technique for both classification and regression.
+* 🔑 Kernel functions help in handling non-linear data by mapping it to higher-dimensional spaces.
+* 🎯 Hyperparameter tuning (e.g., `C`, `gamma`, `kernel`) is crucial for improving model performance.
+* 🧼 Proper preprocessing of data is essential for optimal results, especially with categorical features in SVR.
+
+---
