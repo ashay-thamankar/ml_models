@@ -122,4 +122,31 @@ This simplifies computation significantly.
 * Works best when features are **independent** and **non-correlated**.
 * Choice of Naive Bayes type depends on the **nature of features** (continuous, discrete, binary, categorical).
 
+
+# 🌸 Naive Bayes Classifier – Example
+
+## 📌 Overview
+
+This example demonstrates the use of **Gaussian Naive Bayes** to classify the **Iris flower dataset** into its three species based on sepal and petal measurements. Gaussian Naive Bayes is chosen because the features are continuous and approximately follow a normal distribution.
+
+🔗 **View Notebook:** [Naive Bayes Iris Example](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/Naive_Bayes_Classifier/Naive_Bayes_Example.ipynb)
+
+---
+
+## ⚙️ Workflow
+
+1. **Dataset Loading:** Used the classic Iris dataset containing 150 samples with 4 features (sepal length, sepal width, petal length, petal width) and 3 target classes.
+2. **Data Splitting:** Divided into **70% training** and **30% testing** data for evaluation.
+3. **Model Training:** Applied **Gaussian Naive Bayes** to learn the conditional probability distributions.
+4. **Prediction:** Classified unseen test data into one of the three Iris species.
+5. **Evaluation:** Assessed model performance using a confusion matrix, accuracy score, and classification report.
+
+---
+
+## 🎯 Key Takeaways
+
+* Gaussian Naive Bayes is highly effective when features follow a **normal distribution**.
+* For well-separated classes like Iris species, it can achieve **perfect accuracy**.
+* Works well with small datasets and minimal tuning.
+
 ---
