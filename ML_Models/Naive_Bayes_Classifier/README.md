@@ -92,9 +92,8 @@ This simplifies computation significantly.
    * Assumes continuous features follow a **Gaussian (Normal) distribution**.
    * Likelihood:
 
-     $$
-     P(x_i | y) = \frac{1}{\sqrt{2\pi\sigma_y^2}} \exp\left( -\frac{(x_i - \mu_y)^2}{2\sigma_y^2} \right)
-     $$
+     $P(x_i \mid y) = \frac{1}{\sqrt{2\pi\sigma_y^2}} \exp\left( -\frac{(x_i - \mu_y)^2}{2\sigma_y^2} \right)$
+     
    * Used for datasets with continuous numeric features.
 
 2. **Multinomial Naive Bayes**
@@ -124,6 +123,3 @@ This simplifies computation significantly.
 * Choice of Naive Bayes type depends on the **nature of features** (continuous, discrete, binary, categorical).
 
 ---
-
-I can also make a **flowchart diagram** explaining Naive Bayes step-by-step for the README so it’s more visual.
-Do you want me to create that too?
