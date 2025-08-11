@@ -117,4 +117,36 @@ Decision trees can become too deep and **overfit** the data.
 
 ---
 
-Do you want me to prepare that next?
+### 1️⃣ Decision Tree Regressor – **Diabetes Prediction**
+
+**Notebook:** [Decision\_Tree\_Regressor\_Example.ipynb](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/Decision_Tree/Decision_Tree_Regressor_Example.ipynb)
+
+* **Dataset:** Diabetes dataset from `sklearn.datasets`.
+* **Goal:** Predict disease progression based on medical attributes like BMI, blood pressure, and serum measurements.
+* **Process:**
+
+  1. Data loaded and visualized with correlation heatmaps.
+  2. Train/test split applied.
+  3. Grid Search used to tune hyperparameters (`criterion`, `splitter`, `max_depth`, `max_features`).
+  4. Model evaluated using **R² score**, **Mean Absolute Error (MAE)**, and **Mean Squared Error (MSE)**.
+  5. Final optimized tree visualized.
+* **Key Insight:** Proper parameter tuning improved performance and prevented overfitting.
+
+---
+
+### 2️⃣ Decision Tree Classifier – **Iris Flower Classification**
+
+**Notebook:** [Decision\_Tree\_Classifier\_Example.ipynb](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/Decision_Tree/Decision_Tree_Classifier_Example.ipynb)
+
+* **Dataset:** Iris dataset from `sklearn.datasets`.
+* **Goal:** Classify flowers into species (`Setosa`, `Versicolor`, `Virginica`) based on sepal and petal dimensions.
+* **Process:**
+
+  1. Dataset split into training and testing sets.
+  2. Decision Tree Classifier trained and visualized.
+  3. Grid Search applied to optimize `criterion`, `splitter`, `max_depth`, and `max_features`.
+  4. Model evaluated using **accuracy**, **confusion matrix**, and **classification report**.
+* **Key Insight:** Hyperparameter tuning achieved **\~93% accuracy**, with perfect classification for `Setosa` and strong performance on other classes.
+
+---
+
