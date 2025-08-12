@@ -25,13 +25,13 @@ KNN is intuitive, easy to implement, and works well when decision boundaries are
 * Common distance metrics:
 
   * **Euclidean Distance**:
-
-    $d(p, q) = \sum_{i=1}^n |p_i - q_i|$
-
+    $$
+    d(p, q) = \sqrt{\sum_{i=1}^n (p_i - q_i)^2}
+    $$
   * **Manhattan Distance**:
 
     $$
-    d(p, q) = \sum_{i=1}^n \left| p_i - q_i \right|
+    d(p, q) = \sum_{i=1}^n \lvert p_i - q_i \rvert
     $$
 
   * Others: Minkowski, Cosine similarity.
