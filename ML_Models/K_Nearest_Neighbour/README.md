@@ -32,7 +32,7 @@ KNN is intuitive, easy to implement, and works well when decision boundaries are
   * **Manhattan Distance**:
 
     $$
-    d(p, q) = \sum_{i=1}^n \| p_i - q_i \|
+    d(p, q) = \sum_{i=1}^n \vert p_i - q_i \vert
     $$
   * Others: Minkowski, Cosine similarity.
 
