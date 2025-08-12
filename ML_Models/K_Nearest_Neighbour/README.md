@@ -26,9 +26,8 @@ KNN is intuitive, easy to implement, and works well when decision boundaries are
 
   * **Euclidean Distance**:
 
-    $$
-    d(p, q) = \sqrt{\sum_{i=1}^n (p_i - q_i)^2}
-    $$
+    $d(p, q) = \sum_{i=1}^n |p_i - q_i|$
+
   * **Manhattan Distance**:
 
     $$
