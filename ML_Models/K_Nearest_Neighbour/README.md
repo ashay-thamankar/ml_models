@@ -24,17 +24,11 @@ KNN is intuitive, easy to implement, and works well when decision boundaries are
 * Calculate distance between the new data point and all points in the training set.
 * Common distance metrics:
 
-  * **Euclidean Distance**:
-    
-    $$
-    d(p, q) = \sqrt{\sum_{i=1}^n (p_i - q_i)^2}
-    $$
-    
-* **Manhattan Distance**:
+  * **Euclidean Distance**:  
+  d(p, q) = sqrt( Σ (pᵢ − qᵢ)² ), for i = 1 to n  
 
-    $$
-    d(p, q) = \sum_{i=1}^n \left| p_i - q_i \right|
-    $$
+  * **Manhattan Distance**:  
+    d(p, q) = Σ | pᵢ − qᵢ |, for i = 1 to n
 
   * Others: Minkowski, Cosine similarity.
 
