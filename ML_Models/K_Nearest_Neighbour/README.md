@@ -32,7 +32,7 @@ KNN is intuitive, easy to implement, and works well when decision boundaries are
   * **Manhattan Distance**:
 
     $$
-    d(p, q) = \sum_{i=1}^n |p_i - q_i|
+    d(p, q) = \sum_{i=1}^n \lvert p_i - q_i \rvert
     $$
   * Others: Minkowski, Cosine similarity.
 
@@ -64,7 +64,7 @@ Given:
 3. Predicted class:
 
    $$
-   \hat{y} = \underset{c \in C}{\arg\max} \sum_{i \in N_K(x)} \mathbb{1}(y_i = c)
+   $\hat{y} = \arg\max_{c \in C} \sum_{i \in N_K(x)} I(y_i = c)$
    $$
 
    where $N_K(x)$ is the set of K nearest neighbors.
