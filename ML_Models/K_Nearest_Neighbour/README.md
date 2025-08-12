@@ -60,7 +60,7 @@ Given:
 3. Predicted class:
 
    $$
-   $\hat{y} = \arg\max_{c \in C} \sum_{i \in N_K(x)} I(y_i = c)$
+   \hat{y} = \arg\max_{c \in C} \sum_{i \in N_K(x)} I(y_i = c)
    $$
 
    where $N_K(x)$ is the set of K nearest neighbors.
