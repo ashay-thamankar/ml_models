@@ -59,9 +59,7 @@ Given:
 2. Sort points by distance and pick **K** closest.
 3. Predicted class:
 
-   $$
-   \hat{y} = \arg\max_{c \in C} \sum_{i \in N_K(x)} I(y_i = c)
-   $$
+   ŷ = argmax over c in C of Σ [ I(yᵢ = c) ], for i in Nₖ(x)
 
    where $N_K(x)$ is the set of K nearest neighbors.
 
