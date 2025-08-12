@@ -126,3 +126,31 @@ Its performance relies heavily on:
 For smaller datasets with non-linear patterns, KNN can be a **great baseline** model before moving to more complex approaches.
 
 ---
+
+## KNN Regressor – Example Summary
+
+This example demonstrates the use of **K-Nearest Neighbors Regression** on synthetic data generated using `make_regression`. The model predicts continuous target values by averaging the target values of the nearest neighbors in the feature space.
+
+**Key Points:**
+
+* Evaluated using **R² score**, **Mean Absolute Error (MAE)**, and **Mean Squared Error (MSE)**, achieving \~0.919 R².
+* Captures local patterns in the dataset without assuming a functional form.
+* Performance depends on the choice of **K** and distance metric.
+
+📄 Notebook: [KNN Regressor Example](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/K_Nearest_Neighbour/KNN_Regressor_Example.ipynb)
+
+---
+
+## KNN Classifier – Example Summary
+
+This example applies **K-Nearest Neighbors Classification** on synthetic binary classification data generated with `make_classification`. The model predicts the class of a sample based on the majority vote of its nearest neighbors.
+
+**Key Points:**
+
+* Achieved \~91% accuracy with balanced precision and recall across classes.
+* Works well for datasets with clear separation in feature space.
+* Sensitive to noisy data and irrelevant features.
+
+📄 Notebook: [KNN Classifier Example](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/K_Nearest_Neighbour/KNN_Classifier_Example.ipynb)
+
+---
