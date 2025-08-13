@@ -140,3 +140,121 @@ A Random Forest Classifier predicts a **categorical** label via the **majority v
 * RFs don’t require scaling, but **duplicates/leakage** and **target leakage** must be avoided for fair evaluation.
 
 ---
+
+# Random Forest Regression on CarDekho Dataset
+
+This project demonstrates the application of various regression models, with a focus on **Random Forest Regressor**, to predict car selling prices using the CarDekho dataset.
+
+## Repository Link
+
+[Random Forest Regression Example Notebook](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/Random_Forest/Random_Forest_Regression_Example.ipynb)
+
+## Project Overview
+
+The notebook walks through:
+
+* Loading and exploring the dataset (`cardekho_imputated.csv`)
+* Data cleaning:
+
+  * Handling missing values and duplicates
+  * Removing irrelevant columns (`car_name`, `brand`)
+  * Identifying numerical, categorical, discrete, and continuous features
+* Feature engineering:
+
+  * Label Encoding for high-cardinality categorical columns
+  * One-Hot Encoding for low-cardinality categorical columns
+  * Standard scaling for numerical features
+* Splitting data into training and testing sets
+
+## Model Training & Evaluation
+
+Multiple regression models were trained and evaluated:
+
+* Linear Regression
+* Lasso & Ridge Regression
+* K-Neighbors Regressor
+* Decision Tree Regressor
+* Random Forest Regressor
+
+Evaluation metrics:
+
+* Root Mean Squared Error (RMSE)
+* Mean Absolute Error (MAE)
+* R² Score
+
+## Hyperparameter Tuning
+
+* **KNN** and **Random Forest** models were tuned using `RandomizedSearchCV`
+* Best parameters for Random Forest:
+
+  * `n_estimators = 500`
+  * `max_depth = 15`
+  * `max_features = 5`
+  * `min_samples_split = 2`
+* Final Random Forest Model achieved:
+
+  * **R² Score:** 0.9416 on test set
+
+## Key Insights
+
+* Random Forest outperformed other models with high accuracy and low error metrics.
+* Feature encoding and scaling significantly improved model performance.
+* Hyperparameter tuning provided notable gains in prediction quality.
+
+---
+
+# Random Forest Classifier – Travel Dataset
+
+This project demonstrates building a **Random Forest Classifier** model to predict whether a customer purchased a travel package (`ProdTaken`) based on demographic, behavioral, and engagement-related features.
+
+## Notebook Link
+
+You can view the complete implementation here:
+[Random Forest Classifier Example – GitHub](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/Random_Forest/Random_Forest_Classification_Example.ipynb)
+
+## Dataset
+
+The dataset (`Travel.csv`) contains customer details such as:
+
+* Demographics (Age, Gender, Marital Status, Occupation)
+* Contact details (Type of Contact, City Tier)
+* Travel-related attributes (Duration of Pitch, Number of Trips, Product Pitched)
+* Lifestyle & assets (Own Car, Passport)
+* Financial data (Monthly Income)
+
+## Workflow Overview
+
+1. **Data Loading & Exploration**
+
+   * Imported required libraries
+   * Loaded dataset and examined structure, data types, and missing values
+
+2. **Data Cleaning**
+
+   * Fixed inconsistent categories (e.g., `"Fe Male"` → `"Female"`)
+   * Handled missing values using median or mode imputation
+   * Removed unnecessary columns (e.g., `CustomerID`)
+
+3. **Feature Engineering**
+
+   * Created `TotalVisiting` from `NumberOfPersonVisiting` + `NumberOfChildrenVisiting`
+   * Categorized features into numerical, categorical, discrete, and continuous
+
+4. **Data Preprocessing**
+
+   * Applied **One-Hot Encoding** for categorical features
+   * Applied **Standard Scaling** for numerical features
+   * Used `ColumnTransformer` to combine preprocessing steps
+
+5. **Model Training**
+
+   * Split data into **Train (80%)** and **Test (20%)**
+   * Trained **Random Forest Classifier** on processed features
+   * Evaluated model performance on test data
+
+6. **Applications**
+
+   * Predict travel package purchase likelihood
+   * Help travel companies in targeted marketing
+
+---
