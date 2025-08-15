@@ -80,14 +80,14 @@ The AdaBoost Regressor extends the AdaBoost idea to **regression problems**. Ins
 3. **Compute error**: weighted mean absolute error (or another loss metric).
 4. **Assign learner weight (α)**:
 
-            $$
-            \alpha_m = \frac{1}{\beta_m}
-            $$
-            
-            Where:
-            
-            * $\beta_m = \frac{\text{Error}_m}{1 - \text{Error}_m}$
-            * $\text{Error}_m$ is the weighted mean squared error (or another loss metric) of the $m^{th}$ weak learner.
+      $$
+      \alpha_m = \frac{1}{\beta_m}
+      $$
+      
+      Where:
+      
+      * $\beta_m = \frac{\text{Error}_m}{1 - \text{Error}_m}$
+      * $\text{Error}_m$ is the weighted mean squared error (or another loss metric) of the $m^{th}$ weak learner.
 
 6. **Update sample weights**: Increase weights for points with larger residual errors.
 7. **Repeat** for multiple rounds.
