@@ -24,11 +24,17 @@ The AdaBoost Classifier focuses on binary or multi-class classification problems
 3. **Calculate error**: the weighted proportion of misclassified points.
 4. **Assign learner weight (α)**:
 
-   $$
-   \alpha_t = \frac{1}{2} \ln\left(\frac{1 - \epsilon_t}{\epsilon_t}\right)
-   $$
+      $$
+      \alpha_t = \frac{1}{2} \ln\left(\frac{1 - \epsilon_t}{\epsilon_t}\right)
+      $$
+      
+      Where:
+      
+      * **αₜ** → Weight of the learner at iteration *t*
+      * **εₜ** → Weighted error rate of that learner
+      * If the learner’s error is small, αₜ becomes larger → meaning the learner is more important.
+      * If the learner’s error is high, αₜ becomes smaller → meaning it’s less trusted.
 
-   where $\epsilon_t$ is the weighted error rate.
 5. **Update sample weights**: Increase weights for misclassified points, decrease for correctly classified ones.
 6. **Normalize** weights so they sum to 1.
 7. **Repeat** steps 2–6 for a set number of rounds or until performance converges.
@@ -73,12 +79,16 @@ The AdaBoost Regressor extends the AdaBoost idea to **regression problems**. Ins
 2. **Train** a weak regressor (e.g., decision stump) on the data.
 3. **Compute error**: weighted mean absolute error (or another loss metric).
 4. **Assign learner weight (α)**:
-
+   
    $$
-   \alpha_t = \frac{1}{2} \ln\left(\frac{1 - \epsilon_t}{\epsilon_t}\right)
+   \alpha_t = \frac{1}{2} \ln \left( \frac{1 - \epsilon_t}{\epsilon_t} \right)
    $$
+   
+   Where:
+   
+   * $\alpha_t$ → Weight of the weak learner $t$
+   * $\epsilon_t$ → Weighted error rate of the learner
 
-   (For regression, the error definition changes, but the weighting principle remains similar.)
 5. **Update sample weights**: Increase weights for points with larger residual errors.
 6. **Repeat** for multiple rounds.
 7. **Final prediction**: Weighted sum of all regressors' outputs.
