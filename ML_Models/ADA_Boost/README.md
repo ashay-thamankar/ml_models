@@ -81,9 +81,9 @@ The AdaBoost Regressor extends the AdaBoost idea to **regression problems**. Ins
 4. **Assign learner weight (α)**:
 
       $$
-      \alpha_m = \frac{1}{\beta_m}
+      \alpha_m = 1 / \beta_m
       $$
-
+      
       Where:
       
       * $\beta_m = \frac{\text{Error}_m}{1 - \text{Error}_m}$
