@@ -25,13 +25,14 @@ XGBoost is a decision-tree-based ensemble method that builds models in a **stage
    - **Hessian (h)**: Second derivative of the loss function (measures error curvature).
 
 3. **Fit Weak Learners (Trees)**  
-   - Split points are chosen to minimize a regularized objective:
-     \[
-     \text{Obj} = \sum_{i} l(y_i, \hat{y}_i) + \sum_{k} \Omega(f_k)
-     \]
-     where:
-     - \( l \) = loss function  
-     - \( \Omega \) = regularization term for complexity control  
+   
+   Split points are chosen to minimize a **regularized objective**:
+   
+   Objective = Σ \[ loss(yᵢ, ŷᵢ) ] + Σ \[ Ω(fₖ) ]
+   
+   where:
+   * loss(yᵢ, ŷᵢ) = the chosen loss function (e.g., logistic loss, MSE)
+   * Ω(fₖ) = regularization term that penalizes model complexity
 
 4. **Update Predictions**  
    Each tree’s prediction is scaled by a **learning rate (η)** and added to the model.
