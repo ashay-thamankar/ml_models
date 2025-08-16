@@ -44,59 +44,59 @@ XGBoost is a decision-tree-based ensemble method that builds models in a **stage
 
 ### 🏷 XGBoost for Classification  
 
-For **binary classification**, the logistic loss is commonly used:  
-
-\[
-L(y, \hat{y}) = -\left[ y \log(p) + (1 - y) \log(1 - p) \right]
-\]
-where:
-- \( y \in \{0, 1\} \) is the true label  
-- \( p = \sigma(\hat{y}) = \frac{1}{1 + e^{-\hat{y}}} \) is the predicted probability  
-
-**Gradients & Hessians** for logistic loss:  
-\[
-g_i = p_i - y_i
-\]
-\[
-h_i = p_i (1 - p_i)
-\]
-
-The **optimal leaf weight** in each tree:
-\[
-w_j^* = - \frac{\sum_{i \in I_j} g_i}{\sum_{i \in I_j} h_i + \lambda}
-\]
-
-The **gain from splitting** a node:
-\[
-\text{Gain} = \frac{1}{2} \left[ \frac{(\sum_{i \in I_L} g_i)^2}{\sum_{i \in I_L} h_i + \lambda} + \frac{(\sum_{i \in I_R} g_i)^2}{\sum_{i \in I_R} h_i + \lambda} - \frac{(\sum_{i \in I} g_i)^2}{\sum_{i \in I} h_i + \lambda} \right] - \gamma
-\]
-
----
-
+   For **binary classification**, the logistic loss is commonly used:  
+   
+   \[
+   L(y, \hat{y}) = -\left[ y \log(p) + (1 - y) \log(1 - p) \right]
+   \]
+   where:
+   - \( y \in \{0, 1\} \) is the true label  
+   - \( p = \sigma(\hat{y}) = \frac{1}{1 + e^{-\hat{y}}} \) is the predicted probability  
+   
+   **Gradients & Hessians** for logistic loss:  
+   \[
+   g_i = p_i - y_i
+   \]
+   \[
+   h_i = p_i (1 - p_i)
+   \]
+   
+   The **optimal leaf weight** in each tree:
+   \[
+   w_j^* = - \frac{\sum_{i \in I_j} g_i}{\sum_{i \in I_j} h_i + \lambda}
+   \]
+   
+   The **gain from splitting** a node:
+   \[
+   \text{Gain} = \frac{1}{2} \left[ \frac{(\sum_{i \in I_L} g_i)^2}{\sum_{i \in I_L} h_i + \lambda} + \frac{(\sum_{i \in I_R} g_i)^2}{\sum_{i \in I_R} h_i + \lambda} - \frac{(\sum_{i \in I} g_i)^2}{\sum_{i \in I} h_i + \lambda} \right] - \gamma
+   \]
+   
+   ---
+   
 ### 📏 XGBoost for Regression  
-
-For **regression**, the most common loss is **Mean Squared Error (MSE)**:  
-\[
-L(y, \hat{y}) = \frac{1}{2}(y - \hat{y})^2
-\]
-
-**Gradients & Hessians** for MSE:
-\[
-g_i = \hat{y}_i - y_i
-\]
-\[
-h_i = 1
-\]
-
-Optimal leaf weight:
-\[
-w_j^* = - \frac{\sum_{i \in I_j} g_i}{\sum_{i \in I_j} h_i + \lambda}
-\]
-(Simplifies to: negative mean error in the leaf, adjusted by regularization.)
-
-The **gain formula** is the same as in classification, but the gradient and hessian values differ based on the loss function.
-
----
+   
+   For **regression**, the most common loss is **Mean Squared Error (MSE)**:  
+   \[
+   L(y, \hat{y}) = \frac{1}{2}(y - \hat{y})^2
+   \]
+   
+   **Gradients & Hessians** for MSE:
+   \[
+   g_i = \hat{y}_i - y_i
+   \]
+   \[
+   h_i = 1
+   \]
+   
+   Optimal leaf weight:
+   \[
+   w_j^* = - \frac{\sum_{i \in I_j} g_i}{\sum_{i \in I_j} h_i + \lambda}
+   \]
+   (Simplifies to: negative mean error in the leaf, adjusted by regularization.)
+   
+   The **gain formula** is the same as in classification, but the gradient and hessian values differ based on the loss function.
+   
+   ---
 
 ## ✅ Advantages
 
