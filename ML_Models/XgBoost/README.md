@@ -131,7 +131,7 @@ The **gain formula** is the same as classification, but since the hessian is con
 
 ---
 
-### 📂 AdaBoost Notebook Examples
+### 📂 XgBoost Notebook Examples
 
 * **[XgBoost Regression Example](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/XgBoost/Xgboost_Regression_Example.ipynb)**
   Predicting **used car prices** in India based on features from *cardehko.com*. The model provides price suggestions for new sellers based on market trends. 🚗💰
