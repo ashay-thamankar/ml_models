@@ -65,3 +65,12 @@ The algorithm seeks to minimize this cost function **J**, giving compact and wel
 K-Means is a **powerful, simple, and widely used clustering algorithm** that works best on well-separated, spherical clusters. While it has limitations (like sensitivity to K and outliers), it remains a go-to choice for many real-world applications.
 
 ---
+
+## 📂 K-Means Clustering Notebook Examples
+
+**[K-Means Example](https://github.com/ashay-thamankar/ml_models/tree/main/ML_Models/Kmeans_Clustering)**
+
+* **Data Generation** → Synthetic blobs data created for testing.
+* **Preprocessing** → Feature scaling using `StandardScaler`.
+* **Modeling** → K-Means clustering with `k-means++` initialization.
+* **Evaluation** → Elbow method & Silhouette score for K selection.
