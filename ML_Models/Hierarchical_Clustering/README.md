@@ -99,3 +99,32 @@ This ensures clusters are merged in a way that **minimizes within-cluster varian
 ✨ **In summary:** Hierarchical Clustering is a powerful unsupervised technique for understanding the **structure and relationships in data**. It is especially useful when the number of clusters is not known beforehand and when interpretability (via dendrograms) is important.
 
 ---
+
+# Hierarchical Clustering on Iris Dataset 🌸
+
+This notebook demonstrates **Hierarchical Clustering** using the classic **Iris dataset**. The workflow covers preprocessing, dimensionality reduction, dendrogram visualization, and evaluation of clustering performance.
+
+👉 Full notebook here: [Hierarchical Clustering Example](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/Hierarchical_Clustering/Hierarchical_Clustering_Example.ipynb)
+
+### 📌 Key Steps Covered
+
+* **Dataset**: Loaded the Iris dataset with 4 features.
+* **Preprocessing**: Standardized the features for uniform scaling.
+* **Dimensionality Reduction**: Applied **PCA** to reduce dimensions to 2 for visualization.
+* **Dendrogram**: Constructed using **Ward’s method** to visualize hierarchical relationships.
+* **Agglomerative Clustering**: Implemented clustering with different cluster numbers.
+* **Evaluation**: Computed **Silhouette Coefficients** to assess clustering quality across multiple cluster sizes.
+
+### 🎯 Objective
+
+* Visualize how hierarchical clustering groups natural patterns in data.
+* Understand the role of dendrograms in determining the optimal number of clusters.
+* Compare clustering performance with different cluster choices.
+
+### 📊 Insights
+
+* Dendrogram provides a clear visual of how clusters merge.
+* Silhouette scores help in choosing the most appropriate number of clusters.
+* PCA ensures easy visualization while retaining key variance.
+
+---
