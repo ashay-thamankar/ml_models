@@ -89,3 +89,21 @@ Thus, DBSCAN uses **density-based connectivity** instead of a global objective f
 ✨ DBSCAN is a **powerful density-based clustering algorithm** that shines in detecting clusters of arbitrary shapes and handling noise, but requires careful parameter tuning.
 
 ---
+
+# DBSCAN Clustering Example 🚀
+
+This repository contains a simple implementation of the **DBSCAN (Density-Based Spatial Clustering of Applications with Noise)** algorithm using the `scikit-learn` library.
+
+The notebook demonstrates how DBSCAN works on a synthetic **two-moon dataset**, showcasing how it identifies clusters based on density rather than distance alone.
+
+🔗 **Notebook Link**:
+[DBSCAN Clustering Example](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/DBSCAN_Clustering/DBSCAN_Clustering_Example.ipynb)
+
+📌 **Key Highlights**:
+
+* Generates a non-linear "two-moons" dataset.
+* Applies feature scaling for better performance.
+* Fits the **DBSCAN model** with defined parameters (`eps`, `min_samples`).
+* Visualizes clustering results with `matplotlib`.
+
+---
