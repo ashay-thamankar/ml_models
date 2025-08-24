@@ -108,3 +108,40 @@ Although PCA itself is **not a clustering algorithm**, it is often combined with
 PCA = **Find the directions of maximum variance → project data → simplify without losing much info.**
 
 ---
+
+# Principal Component Analysis (PCA) Example  
+
+📓 [View the Notebook](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/Principal_Component_Analysis/Principal_Component_Analysis_Example.ipynb)  
+
+---
+
+## 🔎 Overview  
+This notebook demonstrates **Principal Component Analysis (PCA)** on the Breast Cancer dataset. PCA is a dimensionality reduction technique that helps transform high-dimensional data into fewer dimensions while retaining most of the variance.  
+
+---
+
+## ⚙️ Steps Covered  
+1. **Dataset Loading** – Breast Cancer dataset from `sklearn.datasets`.  
+2. **Standardization** – Features are standardized for PCA.  
+3. **Applying PCA** – Reduced to 2 principal components.  
+4. **Visualization** – Scatter plot of data points across the two principal components.  
+
+---
+
+## 📊 Key Insight  
+- The first two components capture the majority of the variance.  
+- Visualizing in 2D allows us to see the separation of cancer classes clearly.  
+
+---
+
+## 🌟 Applications Highlighted  
+- Dimensionality Reduction  
+- Data Visualization  
+- Feature Extraction for classification models  
+
+---
+
+
+
+
+
