@@ -8,22 +8,22 @@ This repository contains implementations of various **Machine Learning algorithm
 Supervised learning uses **labeled data** (input → output pairs). The model learns from training data and predicts outcomes for new data.  
 Examples include **classification** (predicting categories) and **regression** (predicting continuous values).
 
-| Algorithm | Description | Link |
-|-----------|-------------|------|
-| Decision Tree | Splits data into branches to make predictions | [Decision Tree](./Decision_Tree) |
-| Random Forest | Ensemble of decision trees for better accuracy | [Random Forest](./Random_Forest) |
-| Gradient Boost | Builds models sequentially, focusing on errors | [Gradient_Boost](./Gradient_Boost) |
-| ADA Boost | Adaptive boosting method to improve weak learners | [ADA_Boost](./ADA_Boost) |
-| XGBoost | Optimized boosting algorithm for high performance | [XgBoost](./XgBoost) |
-| Logistic Regression | Classification using a sigmoid function | [Logistic_Regression](./Logistic_Regression) |
-| Naive Bayes Classifier | Probabilistic model based on Bayes’ theorem | [Naive_Bayes_Classifier](./Naive_Bayes_Classifier) |
-| K-Nearest Neighbour (KNN) | Predicts label based on closest neighbors | [K_Nearest_Neighbour](./K_Nearest_Neighbour) |
-| Support Vector Machine (SVM) | Finds optimal hyperplane for classification | [SVM](./SVM) |
-| Simple Linear Regression | Fits a straight line to predict values | [Simple_Linear_Regression](./Simple_Linear_Regression) |
-| Multiple Linear Regression | Uses multiple features for regression | [Multiple_Linear_Regression](./Multiple_Linear_Regression) |
-| Polynomial Regression | Extends linear regression with polynomial terms | [Polynomial_Regression](./Polynomial_Regression) |
-| Ridge & Lasso Regression | Regularized regression to prevent overfitting | [Ridge_Lasso_Regression](./Ridge_Lasso_Regression) |
-| Elastic Net Regression | Combines Ridge and Lasso penalties | [Elastic_Net_Regression](./Elastic_Net_Regression) |
+| Algorithm | Short description | Link |
+|-----------|-------------------|------|
+| Decision Tree | Tree-based model for classification/regression | [Decision_Tree](./ML_Models/Decision_Tree/) |
+| Random Forest | Ensemble of decision trees for more stable predictions | [Random_Forest](./ML_Models/Random_Forest/) |
+| Gradient Boost | Sequential boosting to correct previous errors | [Gradient_Boost](./ML_Models/Gradient_Boost/) |
+| ADA Boost | Adaptive boosting of weak learners | [ADA_Boost](./ML_Models/ADA_Boost/) |
+| XGBoost | High-performance gradient boosting implementation | [XgBoost](./ML_Models/XgBoost/) |
+| Logistic Regression | Linear model for binary/multi-class classification | [Logistic_Regression](./ML_Models/Logistic_Regression/) |
+| Naive Bayes Classifier | Probabilistic classifier using Bayes' theorem | [Naive_Bayes_Classifier](./ML_Models/Naive_Bayes_Classifier/) |
+| K-Nearest Neighbour (KNN) | Classifies by majority vote among nearest neighbors | [K_Nearest_Neighbour](./ML_Models/K_Nearest_Neighbour/) |
+| Support Vector Machine (SVM) | Finds optimal separating hyperplane for classes | [SVM](./ML_Models/SVM/) |
+| Simple Linear Regression | Single-feature linear regression | [Simple_Linear_Regression](./ML_Models/Simple_Linear_Regression/) |
+| Multiple Linear Regression | Multi-feature linear regression | [Multiple_Linear_Regression](./ML_Models/Multiple_Linear_Regression/) |
+| Polynomial Regression | Extends linear model with polynomial features | [Polynomial_Regression](./ML_Models/Polynomial_Regression/) |
+| Ridge & Lasso Regression | Regularized linear regression methods | [Ridge_Lasso_Regression](./ML_Models/Ridge_Lasso_Regression/) |
+| Elastic Net Regression | Combination of L1 and L2 regularization | [Elastic_Net_Regression](./ML_Models/Elastic_Net_Regression/) |
 
 ---
 
@@ -31,15 +31,14 @@ Examples include **classification** (predicting categories) and **regression** (
 Unsupervised learning works on **unlabeled data**. It finds hidden patterns, groupings, or structures without predefined outputs.  
 Examples include **clustering** and **dimensionality reduction**.
 
-| Algorithm | Description | Link |
-|-----------|-------------|------|
-| K-Means Clustering | Groups data into K clusters based on similarity | [Kmeans_Clustering](./Kmeans_Clustering) |
-| Hierarchical Clustering | Builds a tree of clusters (dendrogram) | [Hierarchical_Clustering](./Hierarchical_Clustering) |
-| DBSCAN Clustering | Groups data based on density, handles noise | [DBSCAN_Clustering](./DBSCAN_Clustering) |
-| Principal Component Analysis (PCA) | Reduces dimensionality while preserving variance | [Principal_Component_Analysis](./Principal_Component_Analysis) |
+| Algorithm | Short description | Link |
+|-----------|-------------------|------|
+| K-Means Clustering | Partition data into K clusters by similarity | [Kmeans_Clustering](./ML_Models/Kmeans_Clustering/) |
+| Hierarchical Clustering | Builds nested clusters (dendrogram) | [Hierarchical_Clustering](./ML_Models/Hierarchical_Clustering/) |
+| DBSCAN Clustering | Density-based clustering, robust to noise | [DBSCAN_Clustering](./ML_Models/DBSCAN_Clustering/) |
+| Principal Component Analysis (PCA) | Dimensionality reduction preserving variance | [Principal_Component_Analysis](./ML_Models/Principal_Component_Analysis/) |
 
 ---
-
 ## 🚀 How to Use
 1. Navigate to the desired model folder.  
 2. Each folder contains:  
