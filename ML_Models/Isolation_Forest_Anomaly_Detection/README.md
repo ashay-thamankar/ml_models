@@ -1,4 +1,4 @@
-# 🌲 Isolation Forest Algorithm – README
+# 🌲 Isolation Forest Algorithm
 
 ## 📖 About Isolation Forest
 
@@ -86,5 +86,27 @@ Where:
 ## 🌟 Summary
 
 Isolation Forest is a **powerful anomaly detection technique** that isolates data points instead of profiling them. By leveraging **random partitioning and path length analysis**, it is highly effective in detecting outliers across diverse domains.
+
+---
+
+# Isolation Forest - Anomaly Detection 🚨🌲
+
+This project demonstrates the use of the **Isolation Forest algorithm** for detecting anomalies in a dataset. The algorithm isolates observations by randomly selecting a feature and splitting values — anomalies are easier to isolate compared to normal points.
+
+## Repository Link 🌐
+
+👉 [Isolation Forest Anomaly Detection](https://github.com/ashay-thamankar/ml_models/tree/main/ML_Models/Isolation_Forest_Anomaly_Detection)
+
+## Workflow 🔍
+
+* Load and visualize the dataset (`healthcare.csv`).
+* Apply **Isolation Forest** to detect anomalies.
+* Mark anomalous points in a scatter plot for clear visualization.
+
+## Key Highlights 📌
+
+* Easy-to-implement anomaly detection technique.
+* Works well with high-dimensional data.
+* Provides intuitive visualization of anomalies.
 
 ---
