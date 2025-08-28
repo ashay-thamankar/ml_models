@@ -1,104 +1,96 @@
-# 📘 Local Outlier Factor (LOF) Algorithm
+# Local Outlier Factor (LOF)
 
-## 🔎 About
+## 📌 About
 
-The **Local Outlier Factor (LOF)** algorithm is an **unsupervised anomaly detection** technique that identifies data points significantly different from their neighbors. Unlike global outlier detection methods, LOF focuses on the **local density** of data points, making it robust in datasets with **non-uniform densities**.
-
-Introduced by Breunig et al. (2000), LOF assigns each data point a score — the **LOF score** — indicating how much of an outlier it is compared to its neighbors. Higher scores suggest a stronger anomaly.
+Local Outlier Factor (LOF) is an **unsupervised anomaly detection algorithm** that identifies data points which significantly deviate from their neighbors. Unlike global methods, LOF focuses on **local density deviation**, making it powerful for datasets with varying densities.
 
 ---
 
 ## ⚙️ How It Works
 
-LOF compares the **local density** of a point with that of its neighbors. The main idea is:
+1. **Neighborhood Selection (k-nearest neighbors):**
+   For each data point, LOF identifies its `k` nearest neighbors.
 
-* If a point’s density is much lower than its neighbors, it’s likely an outlier.
-* If it’s similar, the point is normal.
+2. **Reachability Distance:**
+   The distance of a point `A` to a neighbor `B` is defined as:
 
-The process involves four steps:
+   ```
+   reach-dist_k(A, B) = max{k-distance(B), d(A, B)}
+   ```
 
-1. **k-distance**: For each point `p`, compute the distance to its *k-th nearest neighbor*.
-2. **Reachability distance**: Define how far `p` is from a neighbor `o`, considering the neighbor’s k-distance.
+   where `k-distance(B)` is the distance of `B` to its k-th nearest neighbor, and `d(A,B)` is the actual distance.
 
-   $$
-   \text{reach-dist}_k(p, o) = \max \{\text{k-distance}(o), d(p,o)\}
-   $$
+3. **Local Reachability Density (LRD):**
+   Measures how closely a point is surrounded by its neighbors:
 
-   where $d(p,o)$ is the distance between points.
-3. **Local Reachability Density (LRD)**: Measure the density around a point `p` as the inverse of the average reachability distance from its neighbors.
+   ```
+   LRD_k(A) = 1 / (avg(reach-dist_k(A, B) for B in neighbors_k(A)))
+   ```
 
-   $$
-   LRD_k(p) = \frac{1}{\frac{\sum_{o \in N_k(p)} \text{reach-dist}_k(p,o)}{|N_k(p)|}}
-   $$
+4. **Local Outlier Factor (LOF):**
+   The anomaly score is defined as the ratio of the average LRD of neighbors to the LRD of the point:
 
-   where $N_k(p)$ is the set of k-nearest neighbors of `p`.
-4. **LOF score**: The ratio of the average LRD of neighbors to the LRD of point `p`.
+   ```
+   LOF_k(A) = avg(LRD_k(B) / LRD_k(A) for B in neighbors_k(A))
+   ```
 
-   $$
-   LOF_k(p) = \frac{\sum_{o \in N_k(p)} \frac{LRD_k(o)}{LRD_k(p)}}{|N_k(p)|}
-   $$
-
-* If $LOF_k(p) \approx 1$ → `p` is normal.
-* If $LOF_k(p) > 1$ → `p` is an outlier.
+   * If `LOF ≈ 1` → point has similar density to neighbors (normal).
+   * If `LOF >> 1` → point has much lower density (outlier).
 
 ---
 
-## 🧮 Mathematical Intuition
+## 🔢 Mathematical Intuition
 
-Think of LOF as a way of comparing **densities**:
+* LOF leverages **relative density** instead of absolute distance.
+* Example analogy: A fish among other fish 🐟 is normal, but the same fish among birds 🐦 becomes an “outlier.”
+* Formula-style intuition:
 
-* A point inside a dense cluster has similar **local reachability density (LRD)** as its neighbors → ratio ≈ 1.
-* A point in a sparse region has much lower density than its neighbors → ratio > 1.
+  ```
+  LOF(xᵢ) ≈ ( Σ (LRD of neighbors) / (LRD of xᵢ) ) / k
+  ```
 
-In simple regression terms, we might express density relationships similarly to how we express linear models:
-
-$$
-\text{Density}(p) = \beta₀ + \beta₁x + \varepsilon
-$$
-
-Here:
-
-* $\beta₀$ represents baseline density.
-* $\beta₁x$ represents how neighborhood density affects the point.
-* $\varepsilon$ captures deviation (potential anomaly effect).
-
-Instead of predicting a response, LOF evaluates whether a point’s density deviates too much from its expected neighborhood density.
+  where low LRD means sparse neighborhood → high anomaly score.
 
 ---
 
-## 🌟 Advantages
+## ✅ Advantages
 
-* ✅ **Local sensitivity**: Works well in datasets with varying densities.
-* ✅ **No strong distribution assumptions**: Unlike parametric methods.
-* ✅ **Handles clusters**: Can detect anomalies relative to local clusters.
-* ✅ **Interpretable scores**: LOF score gives a direct measure of outlierness.
-
----
-
-## ⚠️ Limitations
-
-* ❌ **Choice of k**: Highly sensitive to parameter `k` (neighbors).
-* ❌ **Computational cost**: Expensive for very large datasets (requires distance computation).
-* ❌ **Not deterministic**: Different `k` values may classify the same point differently.
-* ❌ **Struggles with high dimensions**: Distance measures degrade in very high-dimensional data.
+* Captures **local density variations** 🔍.
+* Handles datasets with **non-uniform distributions**.
+* Works well for **unsupervised anomaly detection** (no labels needed).
+* Provides **relative anomaly scores**.
 
 ---
 
-## 📌 Applications
+## ❌ Limitations
 
-LOF is widely used across domains for **outlier and anomaly detection**, including:
-
-* 🏦 **Fraud detection** in banking transactions.
-* 💳 **Credit card misuse detection**.
-* 🏭 **Fault detection** in manufacturing systems.
-* 🌐 **Network intrusion detection** (cybersecurity).
-* 📊 **Data cleaning**: Identifying erroneous or noisy data points.
-* 📦 **Supply chain & logistics**: Detecting unusual consumption or shipment patterns.
+* Sensitive to **parameter `k` (neighbors)**.
+* Computationally expensive ⚡ on large datasets.
+* Scores may vary with different contamination assumptions.
+* Not ideal for **very high-dimensional data**.
 
 ---
 
-## 📝 Summary
+## 🚀 Applications
 
-The **Local Outlier Factor** algorithm is a powerful unsupervised technique that identifies anomalies based on **relative density differences**. It is especially effective in datasets with **non-uniform distributions**, though it comes with challenges in parameter tuning and computational scalability.
+* Fraud detection 💳
+* Intrusion detection in cybersecurity 🔐
+* Sensor fault detection ⚙️
+* Outlier detection in manufacturing & supply chain 🏭
+* Healthcare anomaly detection 🩺
+
+---
+
+## 📝 Example Usage
+
+A **full working example** of LOF in Python (with synthetic dataset and visualization) is included in this repo:
+
+👉 [Example Code – LOF Implementation](https://github.com/ashay-thamankar/ml_models/blob/main/ML_Models/Local_Outlier_Factor/example_lof.py)
+
+This example demonstrates:
+
+* Creating a toy dataset with inliers & outliers
+* Fitting **LOF (unsupervised mode)**
+* Visualizing outliers vs inliers
 
 ---
