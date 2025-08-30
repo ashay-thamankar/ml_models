@@ -87,4 +87,20 @@ $$
 
 KNN-based Outlier Detection is a **powerful, distance-based anomaly detection method** that identifies unusual points by comparing neighbor distances. It is **easy to interpret**, widely used, and effective in many real-world scenarios, though it may struggle with **scalability** and **high-dimensional data**.
 
+
+---
+
+# 🔍 KNN-Based Outlier Detection
+
+A simple example of using **K-Nearest Neighbors (KNN)** to spot anomalies based on distance from neighbors.
+
+Check it out here 👉 [KNN Based Outlier Detection Example](https://github.com/ashay-thamankar/ml_models/tree/main/ML_Models/KNN_based_Outlier_Detection)
+
+### ✨ Highlights
+
+* 📊 Synthetic dataset with inliers & outliers
+* 📏 Outlier score from k-th nearest neighbor distance
+* 🎨 Clear visualization of anomalies vs normal points
+* 🚀 Easy to understand & extend for other datasets
+
 ---
