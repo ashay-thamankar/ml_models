@@ -98,6 +98,7 @@ This ensures we only focus on the most meaningful and frequent patterns.
 ## Reference Link 🔗
 
 For more details and implementation, check out:
-[Apriori Algorithm on GitHub](https://github.com/ashay-thamankar/ml_models)
+[Apriori Algorithm on GitHub](https://github.com/ashay-thamankar/ml_models/tree/main/ML_Models/Apriori_Algorithm)
+
 
 ---
